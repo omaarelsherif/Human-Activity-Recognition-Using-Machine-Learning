@@ -11,6 +11,12 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+from sklearn.model_selection import KFold, cross_val_score
 
 ## 1 | Data Preprocessing ##
 """Prepare and analyse the dataset before training"""
@@ -51,27 +57,21 @@ train = train.drop(['Data','subject','Activity'], axis =1)
 # 1.7 Standardize train set :
 # Rescaling the distribution of value so that the mean of observed values is 0 
 # and the standard deviation is 1
-from sklearn.preprocessing import StandardScaler
 slc = StandardScaler()
 train = slc.fit_transform(train)
 
 # 1.8 Dimensionality reduction :
 # Transformation of data from a high-dimensional space into a low-dimensional space 
-from sklearn.decomposition import PCA
 pca = PCA(n_components=0.9, random_state=0)
 train = pca.fit_transform(train)
 
 # 1.9 Splitting the  data into training and testing
-from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(train, activity, test_size = 0.2, random_state = 0)
 
 ## 2 | Model Creation ##
 """Create model to fit it to the data"""
 
 # 2.1 Model creation
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
-from sklearn.model_selection import KFold, cross_val_score
 model = KNeighborsClassifier(algorithm='auto', n_neighbors=8, p=1, weights='distance')
 
 # 2.2 Fit model to the data
