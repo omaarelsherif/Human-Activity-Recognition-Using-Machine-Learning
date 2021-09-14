@@ -30,6 +30,10 @@ This is list of required packages and modules for the project to be installed :
   ```sh
   pip install matplotlib
   ```
+* Scikit-learn
+  ```sh
+  pip install scikit-learn
+  ```
 
 <!-- INSTALLATION -->
 ## ➲ Installation
