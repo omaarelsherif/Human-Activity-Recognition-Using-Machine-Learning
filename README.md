@@ -5,7 +5,8 @@
 ## ➲ Project description
 Human activity recognition is the problem of classifying sequences of data
 recorded by specialized harnesses or smart phones into known well-defined Human activities,
-The problem will be solved using K-Nearest-Neighbor (KNN) algorithm
+The problem will be solved using K-Nearest-Neighbor (KNN) algorithm where we will train the model on dataset of collection of 
+human activites in order to classifying them based on categories 
 
 <!-- PREREQUISTIES -->
 ## ➲ Prerequisites
