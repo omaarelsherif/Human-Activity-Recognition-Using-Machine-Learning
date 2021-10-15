@@ -31,23 +31,25 @@ train['Data'] = 'Train'
 test['Data']  = 'Test'
 both = pd.concat([train, test], axis=0).reset_index(drop=True)
 both['subject'] = '#' + both['subject'].astype(str)
-train.shape, test.shape
+print(both.columns)
 
 # 1.3 Showing combined data
-print(both.head())
+print(f"Dataset head :\n{both.head()}\n")
 
 # 1.4 Data statistics
 stats = pd.DataFrame()
 stats['Missing value']  = both.isnull().sum()
 stats['N unique value'] = both.nunique()
 stats['dtype'] = both.dtypes
-print(stats)
+print(f"Data statistics :\n{stats}\n")
 
 # 1.5 Human activites
 activity = both['Activity']
 label_counts = activity.value_counts()
 plt.figure(figsize= (12, 8))
 plt.bar(label_counts.index, label_counts)
+plt.title("Activites", fontsize=25)
+plt.show()
 
 # 1.6 Prepare train set
 Data = both['Data']
@@ -99,3 +101,5 @@ print(f"\nClassification report : \n{classification_report(y_test, y_pred)}")
 cm = confusion_matrix(y_test, y_pred)
 print(f"\nConfusion matrix : \n")
 sns.heatmap(cm, annot=True)
+plt.title("Confusion matrix")
+plt.show()
