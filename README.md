@@ -80,7 +80,7 @@ Now let's see the project output after running customer_churn.py :
 ![](/Images/Output_4_Acc_Classification_Report.png)<br><br>
 
 **Model confusion matrix :**<br>
-![](/Images/Output_6_Confusion_Matrix.png)<br><br>
+![](/Images/Output_6_Confusion_Matrix.png)
 
 <!-- REFERENCES -->
 ## <br>**➲ References**
