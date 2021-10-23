@@ -31,7 +31,7 @@ Install all required packages :
 <!-- THE DATASET -->
 ## <br>**➲ The Dataset**
 Human activites dataset contain about 564 columns to describe human current activity<br>
-and a target column which describe what's the current state of a human.
+and a target column which describe what's the current state of a human.<br>
 <br>**Dataset features and target :**
 ![](Images/Dataset_Columns.png)<br>
 <br>**Dataset head :**
