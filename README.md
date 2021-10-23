@@ -33,7 +33,9 @@ Install all required packages :
 Human activites dataset contain about 564 columns to describe human current activity<br>
 and a target column which describe what's the current state of a human.
 <br>**Dataset features and target :**
-![](Images/dataset_columns.png)
+![](Images/Dataset_Columns.png)<br>
+<br>**Dataset head :**
+![](Images/Dataset_Head.png)
 
 <!-- CODING SECTIONS -->
 ## <br>**➲ Coding Sections**
@@ -42,9 +44,13 @@ In this part we will see the project code divided to sections as follows:
 
 - Section 1 | Data Preprocessing :<br>
 In this section we aim to do some operations on the dataset before training the model on it,
-<br>processes like loading dataset, check missing values and dataset statistics.
-<br>then we visualize some dataset columns in order to have some insights for better understanding, and apply dimensionality reduction using PCA algorithm in order to transform the data from a high-dimensional space into a low-dimensional space.
-<br>Finally we scale the dataset and split it into training and testing sets<br>
+<br>processes like :
+  - Loading dataset
+  - Check missing values and dataset statistics
+  - Visualize some dataset columns in order to have some insights for better understanding
+  - Apply dimensionality reduction using PCA algorithm in order to transform the data from a high-dimensional space into a low-dimensional space
+  - Scale the dataset
+  - Split the dataset into training and testing sets<br>
 
 - Section 2 | Model Creation :<br>
 The dataset is ready for training, so we create a K-nearest Neighbors "KNN" model using scikit-learn and thin fit it to the data.<br>
